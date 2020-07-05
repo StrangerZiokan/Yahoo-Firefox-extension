@@ -1,3 +1,4 @@
+// FOR YAHOO 
 browser.contextMenus.create({
 	id: "yoo",
 	title: "Search on Yahoo!!!",
@@ -12,3 +13,22 @@ function contextMenuAction(info, tab) {
 		url: url
 	});
 }
+// UNCOMMENT for other search extensions.
+/*
+// DUCK-DUCK-GO
+browser.contextMenus.create({
+	id: "dgg",
+	title: "Search on Duck-Duck-GO!!!",
+	contexts: ["selection"]
+});
+
+browser.contextMenus.onClicked.addListener(contextMenuAction);
+
+function contextMenuAction(info, tab) {
+	const url = "https://duckduckgo.com/?q=" + info.selectionText;
+	browser.tabs.create({
+		url: url
+	});
+}
+
+*/
